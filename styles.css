@@ -1412,6 +1412,105 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .availability { font-size: 0.75rem; }
 }
 
+/* ─── "How I Build" pipeline ─── */
+.pipeline-block { margin-top: 100px; }
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  counter-reset: stage;
+}
+.pipeline-stage {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: var(--transition);
+}
+.pipeline-stage:hover { border-color: var(--accent); transform: translateY(-3px); }
+/* arrow connector between stages */
+.pipeline-stage:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 38px;
+  right: -15px;
+  width: 10px; height: 10px;
+  border-top: 2px solid var(--accent2);
+  border-right: 2px solid var(--accent2);
+  transform: rotate(45deg);
+  z-index: 1;
+}
+.stage-num {
+  font-family: var(--font-h);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent2);
+  background: var(--accent2-dim);
+  border-radius: 6px;
+  padding: 3px 8px;
+  align-self: flex-start;
+}
+.stage-title {
+  font-family: var(--font-h);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.stage-desc { font-size: 0.85rem; color: var(--text-sec); line-height: 1.6; flex: 1; }
+.stage-proof { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.stage-proof .tag-sm { border-radius: 8px; line-height: 1.45; }
+
+/* Current role marker */
+.current-pill {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+  font-family: var(--font-h);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--success);
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+.timeline-item-current .timeline-dot {
+  background: var(--success);
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15), 0 0 20px rgba(34, 197, 94, 0.35);
+}
+.timeline-item-current .timeline-card { border-color: rgba(34, 197, 94, 0.3); }
+.timeline-loc { color: var(--text-muted); font-weight: 400; }
+
+/* Coursework card icon */
+.cert-logo-course {
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  background: var(--accent2-dim);
+  color: var(--accent2);
+}
+.cert-logo-course svg { width: 22px; height: 22px; }
+
+@media (max-width: 1024px) {
+  .pipeline { grid-template-columns: repeat(3, 1fr); }
+  .pipeline-stage:nth-child(3)::after { display: none; }
+}
+@media (max-width: 640px) {
+  .pipeline-block { margin-top: 70px; }
+  .pipeline { grid-template-columns: 1fr; gap: 24px; }
+  .pipeline-stage:nth-child(3)::after { display: block; }
+  .pipeline-stage:not(:last-child)::after {
+    top: auto; bottom: -17px; right: auto; left: 50%;
+    transform: translateX(-50%) rotate(135deg);
+  }
+}
+
 /* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

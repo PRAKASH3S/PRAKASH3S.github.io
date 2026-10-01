@@ -80,7 +80,7 @@ function highlightNavLink() {
 }
 
 /* ─── TYPED TEXT ANIMATION ─── */
-const roles = ['Data Analyst', 'BI Analyst', 'Analytics Engineer', 'Data Engineer'];
+const roles = ['Data Engineer', 'Analytics Engineer', 'Data Modeler', 'BI Engineer'];
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let roleIndex = 0, charIndex = 0, isDeleting = false;
 const typedEl = document.getElementById('typedText');
