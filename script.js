@@ -2,25 +2,67 @@
    PRAKASH TEKI PORTFOLIO — script.js
 ═══════════════════════════════════════════ */
 
-/* ─── NAVBAR SCROLL ─── */
+/* ─── NAVBAR, PROGRESS BAR, BACK-TO-TOP (one rAF-throttled scroll handler) ─── */
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 40);
+const progressBar = document.getElementById('scrollProgress');
+const backToTop = document.getElementById('backToTop');
+let scrollTicking = false;
+
+function onScroll() {
+  const y = window.scrollY;
+  navbar.classList.toggle('scrolled', y > 40);
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  if (progressBar) progressBar.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+  if (backToTop) backToTop.classList.toggle('show', y > 600);
   highlightNavLink();
-});
+  animateStats();
+  scrollTicking = false;
+}
+window.addEventListener('scroll', () => {
+  if (!scrollTicking) {
+    scrollTicking = true;
+    requestAnimationFrame(onScroll);
+  }
+}, { passive: true });
+
+if (backToTop) {
+  backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
+/* ─── THEME TOGGLE (dark default, remembers choice) ─── */
+const themeToggle = document.getElementById('themeToggle');
+const themeMeta = document.querySelector('meta[name="theme-color"]');
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  if (themeMeta) themeMeta.setAttribute('content', theme === 'light' ? '#f7f8fc' : '#09090f');
+  if (themeToggle) themeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+}
+applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    applyTheme(next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+}
 
 /* ─── MOBILE MENU ─── */
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  mobileMenu.classList.toggle('open');
-});
+function setMenu(open) {
+  hamburger.classList.toggle('open', open);
+  mobileMenu.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', String(open));
+}
+hamburger.addEventListener('click', () => setMenu(!mobileMenu.classList.contains('open')));
 document.querySelectorAll('.mobile-link').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    mobileMenu.classList.remove('open');
-  });
+  link.addEventListener('click', () => setMenu(false));
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+    setMenu(false);
+    hamburger.focus();
+  }
 });
 
 /* ─── ACTIVE NAV LINK ON SCROLL ─── */
@@ -38,7 +80,8 @@ function highlightNavLink() {
 }
 
 /* ─── TYPED TEXT ANIMATION ─── */
-const roles = ['Data Analyst', 'Analytics Engineer', 'BI Engineer', 'Data Engineer'];
+const roles = ['Data Engineer', 'Analytics Engineer', 'Data Modeler', 'BI Engineer'];
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let roleIndex = 0, charIndex = 0, isDeleting = false;
 const typedEl = document.getElementById('typedText');
 
@@ -62,7 +105,11 @@ function typeText() {
   }
   setTimeout(typeText, speed);
 }
-setTimeout(typeText, 800);
+if (reduceMotion) {
+  typedEl.textContent = roles[0];
+} else {
+  setTimeout(typeText, 800);
+}
 
 /* ─── SCROLL REVEAL (IntersectionObserver) ─── */
 const revealEls = document.querySelectorAll('.reveal');
@@ -89,6 +136,7 @@ function animateStats() {
     statsAnimated = true;
     statNums.forEach(el => {
       const target = +el.getAttribute('data-target');
+      if (reduceMotion) { el.textContent = target; return; }
       const duration = 1200;
       const step = target / (duration / 16);
       let current = 0;
@@ -100,7 +148,6 @@ function animateStats() {
     });
   }
 }
-window.addEventListener('scroll', animateStats);
 animateStats();
 
 /* ─── PROJECT FILTER ─── */
@@ -109,8 +156,12 @@ const projectCards = document.querySelectorAll('.project-card');
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
+    filterBtns.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
     const filter = btn.getAttribute('data-filter');
     projectCards.forEach(card => {
       const cats = card.getAttribute('data-category') || '';
@@ -124,29 +175,22 @@ filterBtns.forEach(btn => {
   });
 });
 
-/* ─── CONTACT FORM ─── */
+/* ─── CONTACT FORM ───
+   GitHub Pages is static, so the form composes an email in the visitor's
+   mail app (mailto:) with the fields pre-filled. */
 const form = document.getElementById('contactForm');
-const submitBtn = document.getElementById('submitBtn');
 const successMsg = document.getElementById('formSuccess');
+const CONTACT_EMAIL = 'tekiprakash1@gmail.com';
 
 if (form) {
-  form.addEventListener('submit', async (e) => {
-    // If Netlify is handling, let it through. Otherwise handle manually.
-    const isNetlify = form.getAttribute('data-netlify') === 'true';
-    if (!isNetlify) {
-      e.preventDefault();
-      submitBtn.querySelector('.btn-text').textContent = 'Sending...';
-      submitBtn.disabled = true;
-      await new Promise(r => setTimeout(r, 1200));
-      submitBtn.querySelector('.btn-text').textContent = 'Send Message';
-      submitBtn.disabled = false;
-      form.reset();
-      successMsg.classList.add('show');
-      setTimeout(() => successMsg.classList.remove('show'), 5000);
-    } else {
-      submitBtn.querySelector('.btn-text').textContent = 'Sending...';
-      submitBtn.disabled = true;
-    }
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const subject = data.get('subject') || 'Hello from your portfolio';
+    const body = `${data.get('message')}\n\n— ${data.get('name')} (${data.get('email')})`;
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    successMsg.classList.add('show');
+    setTimeout(() => successMsg.classList.remove('show'), 8000);
   });
 }
 
@@ -161,19 +205,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-/* ─── PROFILE IMAGE FALLBACK ─── */
+/* ─── PROFILE IMAGE FALLBACK (only if the photo fails to load) ─── */
 const profileImg = document.querySelector('.profile-img');
 const profileFallback = document.querySelector('.profile-fallback');
 if (profileImg && profileFallback) {
-  profileImg.addEventListener('error', () => {
+  const showFallback = () => {
     profileImg.style.display = 'none';
     profileFallback.style.display = 'flex';
-  });
-  if (!profileImg.complete || profileImg.naturalWidth === 0) {
-    profileImg.style.display = 'none';
-    profileFallback.style.display = 'flex';
-  }
+  };
+  profileImg.addEventListener('error', showFallback);
+  if (profileImg.complete && profileImg.naturalWidth === 0) showFallback();
 }
+
+/* ─── FOOTER YEAR ─── */
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 /* ─── FADE-IN ANIMATION CSS KEYFRAME (injected) ─── */
 const styleSheet = document.createElement('style');

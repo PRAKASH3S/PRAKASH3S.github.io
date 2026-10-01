@@ -3,18 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prakash Teki — Data Analyst & Analytics Engineer</title>
-  <meta name="description" content="Microsoft Certified Data Analyst & Analytics Engineer with 4+ years delivering Power BI dashboards, SQL analytics, and data pipelines across financial services and healthcare." />
-  <meta name="keywords" content="Data Analyst, Analytics Engineer, Business Intelligence, Power BI, SQL, Python, Microsoft Fabric, Databricks, Prakash Teki" />
-  <meta property="og:title" content="Prakash Teki — Data Analyst & Analytics Engineer" />
-  <meta property="og:description" content="Microsoft Certified analytics professional with 4+ years of experience." />
+  <title>Prakash Teki — Data Engineer | Microsoft Fabric · BigQuery · Databricks</title>
+  <meta name="description" content="Data Engineer with 4+ years building ETL/ELT pipelines, lakehouses, dimensional models, and semantic layers on Microsoft Fabric, Google BigQuery, Databricks, and Snowflake. Microsoft Certified (DP-600, PL-300)." />
+  <meta name="keywords" content="Data Engineer, Analytics Engineer, ETL, ELT, Data Pipelines, Microsoft Fabric, Lakehouse, OneLake, BigQuery, GCP, Azure Data Factory, Databricks, Snowflake, PySpark, Apache Spark, SQL, Python, Dimensional Modeling, Star Schema, Medallion Architecture, Data Migration, Teradata, Looker, LookML, Power BI, Data Quality, Prakash Teki" />
+  <meta name="author" content="Prakash Teki" />
+  <meta name="theme-color" content="#09090f" />
+  <link rel="canonical" href="https://prakash3s.github.io/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234361ee'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='28' fill='%23fff'%3EPT%3C/text%3E%3C/svg%3E" />
+  <meta property="og:title" content="Prakash Teki — Data Engineer" />
+  <meta property="og:description" content="Data Engineer at Verizon. Lakehouse pipelines, dimensional models, and semantic models on Microsoft Fabric, BigQuery, and Databricks. DP-600 &amp; PL-300 certified." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://prakash3s.github.io/" />
+  <meta property="og:image" content="https://prakash3s.github.io/assets/photo.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <script>
+    /* Apply saved theme before first paint to avoid a flash */
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Prakash Teki",
+    "jobTitle": "Data Engineer",
+    "worksFor": { "@type": "Organization", "name": "Verizon" },
+    "url": "https://prakash3s.github.io/",
+    "image": "https://prakash3s.github.io/assets/photo.jpg",
+    "email": "mailto:tekiprakash1@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Denton", "addressRegion": "TX", "addressCountry": "US" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of North Texas" },
+      { "@type": "CollegeOrUniversity", "name": "Osmania University" }
+    ],
+    "knowsAbout": ["Data Engineering", "ETL/ELT", "Data Pipelines", "Microsoft Fabric", "BigQuery", "Google Cloud Platform", "Azure Data Factory", "Databricks", "Snowflake", "PySpark", "Apache Spark", "SQL", "Python", "Dimensional Modeling", "Data Migration", "Looker", "LookML", "Power BI", "RAG"],
+    "sameAs": ["https://www.linkedin.com/in/tekip", "https://github.com/PRAKASH3S"]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
   <!-- ═══════════════ NAVIGATION ═══════════════ -->
   <nav id="navbar">
@@ -22,28 +54,36 @@
       <a href="#hero" class="nav-logo">PT</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="assets/resume.pdf" download class="nav-cta">Download CV</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <a href="assets/resume.pdf" download="Prakash_Teki_Resume.pdf" class="nav-cta">Download CV</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <ul>
         <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#skills" class="mobile-link">Skills</a></li>
         <li><a href="#experience" class="mobile-link">Experience</a></li>
         <li><a href="#projects" class="mobile-link">Projects</a></li>
         <li><a href="#education" class="mobile-link">Education</a></li>
+        <li><a href="#awards" class="mobile-link">Awards</a></li>
         <li><a href="#contact" class="mobile-link">Contact</a></li>
-        <li><a href="assets/resume.pdf" download class="mobile-link mobile-cta">Download CV</a></li>
+        <li><a href="assets/resume.pdf" download="Prakash_Teki_Resume.pdf" class="mobile-link mobile-cta">Download CV</a></li>
       </ul>
     </div>
   </nav>
 
+  <main id="main">
   <!-- ═══════════════ HERO ═══════════════ -->
   <section id="hero">
     <div class="hero-bg">
@@ -53,6 +93,7 @@
     </div>
     <div class="container hero-container">
       <div class="hero-text">
+        <p class="availability"><span class="pulse-dot"></span>Data Engineer at Verizon · Open to conversations</p>
         <p class="hero-greeting">Hello, I'm</p>
         <h1 class="hero-name">Prakash Teki</h1>
         <div class="hero-title-wrap">
@@ -60,17 +101,20 @@
           <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
         </div>
         <p class="hero-bio">
-          Microsoft Certified analytics professional with <strong>4+ years</strong> delivering enterprise Power BI solutions,
-          SQL-driven insights, and scalable data pipelines across financial services and healthcare.
-          I turn complex data into decisions that drive real business outcomes.
+          Data Engineer with <strong>4+ years</strong> building ETL/ELT pipelines, lakehouses, and warehouse models across
+          <strong>Microsoft Fabric, Google BigQuery, Databricks, and Snowflake</strong>. I engineer data that holds from source
+          to report: modeled at the right grain, reconciled at every layer, and ready for BI and AI.
         </p>
         <div class="hero-cta">
           <a href="#projects" class="btn-primary">Explore My Work</a>
-          <a href="#contact" class="btn-secondary">Get In Touch</a>
+          <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn-secondary">View Resume</a>
         </div>
         <div class="hero-socials">
           <a href="https://www.linkedin.com/in/tekip" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:tekiprakash1@gmail.com" aria-label="Email" class="social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           </a>
           <a href="https://github.com/PRAKASH3S" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
@@ -79,18 +123,17 @@
       </div>
       <div class="hero-visual">
         <div class="profile-frame">
-          <!-- Place your photo at assets/profile.jpg -->
-          <img src="assets/photo.jpg" alt="Prakash Teki" class="profile-img" />
+          <img src="assets/photo.jpg" alt="Portrait of Prakash Teki" class="profile-img" width="320" height="400" />
           <div class="profile-fallback">PT</div>
         </div>
         <div class="cert-badge badge-1">
-          <span class="badge-icon">&#10003;</span> PL-300 Certified
+          <span class="badge-icon">&#10003;</span> DP-600 · Fabric Engineer
         </div>
         <div class="cert-badge badge-2">
-          <span class="badge-icon">&#10003;</span> DP-600 Certified
+          <span class="badge-icon">&#10003;</span> PL-300 Certified
         </div>
         <div class="cert-badge badge-3">
-          <span class="badge-icon">&#9733;</span> 3.91 GPA
+          <span class="badge-icon">&#9733;</span> BigQuery · GCP
         </div>
       </div>
     </div>
@@ -99,23 +142,28 @@
     <div class="stats-bar">
       <div class="container stats-grid">
         <div class="stat-item">
-          <span class="stat-num" data-target="4">0</span><span class="stat-suffix">+</span>
+          <span class="stat-value"><span class="stat-num" data-target="4">0</span><span class="stat-suffix">+</span></span>
           <span class="stat-label">Years Experience</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <span class="stat-num" data-target="3">0</span>
-          <span class="stat-label">Companies</span>
+          <span class="stat-value"><span class="stat-num" data-target="125">0</span></span>
+          <span class="stat-label">Migrated ETL Jobs Validated</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <span class="stat-num" data-target="12">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Projects Completed</span>
+          <span class="stat-value"><span class="stat-num" data-target="30">0</span><span class="stat-suffix">+</span></span>
+          <span class="stat-label">Source Systems Integrated</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <span class="stat-num" data-target="2">0</span>
-          <span class="stat-label">MS Certifications</span>
+          <span class="stat-value"><span class="stat-num" data-target="3">0</span><span class="stat-suffix">M+</span></span>
+          <span class="stat-label">Records Modeled</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value"><span class="stat-num" data-target="20">0</span></span>
+          <span class="stat-label">GCP Pipelines Built</span>
         </div>
       </div>
     </div>
@@ -126,79 +174,320 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">About Me</span>
-        <h2 class="section-title">Turning Data Into Decisions</h2>
+        <h2 class="section-title">From Raw Data to Trusted Platforms</h2>
       </div>
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            I'm a <strong>Microsoft Certified Data Analyst and Analytics Engineer</strong> with hands-on experience at Accenture,
-            the University of North Texas, and Wisdom Index Advisors. I specialize in building enterprise Power BI semantic models,
-            writing performance-optimized SQL, and engineering automated data pipelines that give stakeholders real-time visibility
-            into what matters most.
+            I'm a <strong>Data Engineer at Verizon</strong>, where I've built <strong>20 GCP pipelines</strong> into BigQuery for the Revenue Operations team,
+            automate revenue-assurance reconciliation, delivered <strong>5 executive Looker dashboards</strong> on a LookML semantic layer, and validated a
+            <strong>125-process Teradata-to-BigQuery migration</strong> before cutover.
           </p>
           <p>
-            My background spans financial services and healthcare — domains where data accuracy, governance, and stakeholder
-            communication are non-negotiable. I bring both technical depth and business fluency, having led discovery sessions,
-            implemented Row Level Security, and delivered solutions that reduced manual reporting time by up to 80%.
+            I got here by working every layer of the data stack. At <strong>Accenture</strong> I learned enterprise
+            foundations: ETL/ELT across OLTP and OLAP systems and SQL tuning across 30+ source systems. At
+            <strong>UNT</strong> I engineered ingestion and star-schema models over 3M+ healthcare records. At
+            <strong>Wisdom Index Advisors</strong> I moved a firm from spreadsheets to a cloud database, an analytics app,
+            and a GPT-4 review agent. <strong>Holiday Channel</strong> was medallion pipelines in PySpark, and
+            <strong>Cates Control Systems</strong> was turning raw ERP tables into a model the business could trust.
+          </p>
+          <p>
+            What ties it together: I define grain and keys before I build, weigh platform trade-offs up front, and
+            reconcile every load, so the numbers hold from source to report.
           </p>
           <ul class="about-highlights">
-            <li><span class="highlight-dot"></span>Enterprise Power BI dashboards with DAX &amp; semantic modeling</li>
-            <li><span class="highlight-dot"></span>Advanced SQL across 30+ relational sources (SAP, CRM, PostgreSQL)</li>
-            <li><span class="highlight-dot"></span>Python-driven ETL pipelines (PySpark, Pandas, Power Automate)</li>
-            <li><span class="highlight-dot"></span>Cloud data platforms: Microsoft Fabric, Azure, Databricks, Snowflake</li>
+            <li><span class="highlight-dot"></span>Batch ETL/ELT &amp; medallion pipelines in PySpark, SQL &amp; Python</li>
+            <li><span class="highlight-dot"></span>Cloud data platforms: Fabric, BigQuery/GCP, Azure, Databricks, Snowflake</li>
+            <li><span class="highlight-dot"></span>Dimensional modeling: grain, facts, dimensions, keys, star schemas</li>
+            <li><span class="highlight-dot"></span>Migration validation &amp; reconciliation (Teradata → BigQuery)</li>
+            <li><span class="highlight-dot"></span>Semantic layers in Power BI &amp; Looker/LookML with row-level security</li>
+            <li><span class="highlight-dot"></span>GenAI in the pipeline: GPT-4, RAG, LangChain &amp; LangGraph</li>
           </ul>
         </div>
-        <div class="skills-wrap reveal">
-          <h3 class="skills-heading">Tech Stack</h3>
-          <div class="skill-group">
-            <span class="skill-group-label">Analytics &amp; BI</span>
-            <div class="skill-tags">
-              <span class="tag tag-accent">Power BI</span>
-              <span class="tag tag-accent">DAX</span>
-              <span class="tag">Tableau</span>
-              <span class="tag">Power Query</span>
-              <span class="tag">Tabular Editor</span>
-            </div>
+        <div class="career-arc reveal">
+          <h3 class="skills-heading">Career Arc</h3>
+          <ol class="arc-list">
+            <li class="arc-item">
+              <span class="arc-year">2021–23</span>
+              <div>
+                <span class="arc-co">Accenture</span>
+                <span class="arc-lesson">Enterprise ETL/ELT, SQL tuning, and data quality at volume</span>
+              </div>
+            </li>
+            <li class="arc-item">
+              <span class="arc-year">2024–25</span>
+              <div>
+                <span class="arc-co">University of North Texas</span>
+                <span class="arc-lesson">Healthcare data at scale: 3M+ records, governed models</span>
+              </div>
+            </li>
+            <li class="arc-item">
+              <span class="arc-year">2025</span>
+              <div>
+                <span class="arc-co">Wisdom Index Advisors</span>
+                <span class="arc-lesson">Spreadsheets → cloud PostgreSQL, a full-stack app, and AI</span>
+              </div>
+            </li>
+            <li class="arc-item">
+              <span class="arc-year">2026</span>
+              <div>
+                <span class="arc-co">Holiday Channel</span>
+                <span class="arc-lesson">Medallion lakehouse pipelines with GPT-4 built in</span>
+              </div>
+            </li>
+            <li class="arc-item">
+              <span class="arc-year">2026</span>
+              <div>
+                <span class="arc-co">Cates Control Systems</span>
+                <span class="arc-lesson">ERP dimensional modeling: grain and composite keys</span>
+              </div>
+            </li>
+            <li class="arc-item arc-now">
+              <span class="arc-year">Now</span>
+              <div>
+                <span class="arc-co">Verizon</span>
+                <span class="arc-lesson">20 GCP pipelines, 5 executive Looker dashboards, migration</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="pipeline-block">
+        <div class="section-header reveal">
+          <span class="section-tag">Approach</span>
+          <h2 class="section-title">How I Build Data Platforms</h2>
+          <p class="section-subtitle">Source to report, with every stage designed so the numbers hold.</p>
+        </div>
+        <div class="pipeline">
+        <div class="pipeline-stage reveal">
+          <span class="stage-num">01</span>
+          <h4 class="stage-title">Ingest</h4>
+          <p class="stage-desc">Scheduled GCP pipelines, PySpark notebooks, and API / file ingestion into raw landing zones.</p>
+          <div class="stage-proof">
+            <span class="tag-sm">20 GCP → BigQuery pipelines</span>
+            <span class="tag-sm">REST API → OneLake</span>
+            <span class="tag-sm">Sheets → PostgreSQL in 2 min</span>
           </div>
-          <div class="skill-group">
-            <span class="skill-group-label">Languages &amp; Query</span>
-            <div class="skill-tags">
-              <span class="tag tag-accent">SQL</span>
-              <span class="tag tag-accent">Python</span>
-              <span class="tag">R</span>
-              <span class="tag">PySpark</span>
-              <span class="tag">Advanced Excel</span>
-            </div>
+        </div>
+        <div class="pipeline-stage reveal">
+          <span class="stage-num">02</span>
+          <h4 class="stage-title">Transform</h4>
+          <p class="stage-desc">Medallion layers (Bronze → Silver → Gold) that standardize, deduplicate, type-cast, and apply business rules.</p>
+          <div class="stage-proof">
+            <span class="tag-sm">PySpark &amp; SQL</span>
+            <span class="tag-sm">Daily refreshes replace manual prep</span>
           </div>
-          <div class="skill-group">
-            <span class="skill-group-label">Data Engineering</span>
-            <div class="skill-tags">
-              <span class="tag tag-accent">Microsoft Fabric</span>
-              <span class="tag">Databricks</span>
-              <span class="tag">ETL/ELT</span>
-              <span class="tag">Medallion Architecture</span>
-              <span class="tag">dbt</span>
-            </div>
+        </div>
+        <div class="pipeline-stage reveal">
+          <span class="stage-num">03</span>
+          <h4 class="stage-title">Model</h4>
+          <p class="stage-desc">Grain, facts, dimensions, and composite keys defined up front so measures aggregate correctly.</p>
+          <div class="stage-proof">
+            <span class="tag-sm">Star schema</span>
+            <span class="tag-sm">12-table ERP model</span>
+            <span class="tag-sm">30+ sources unified</span>
           </div>
-          <div class="skill-group">
-            <span class="skill-group-label">Cloud &amp; Platforms</span>
-            <div class="skill-tags">
-              <span class="tag">Azure Data Factory</span>
-              <span class="tag">Snowflake</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">SAP HANA</span>
-              <span class="tag">Azure Data Lake</span>
-            </div>
+        </div>
+        <div class="pipeline-stage reveal">
+          <span class="stage-num">04</span>
+          <h4 class="stage-title">Validate</h4>
+          <p class="stage-desc">Reconciliation and data quality checks at every layer, before anything reaches a report.</p>
+          <div class="stage-proof">
+            <span class="tag-sm">125 Teradata → BigQuery jobs</span>
+            <span class="tag-sm">Defect caught pre-cutover</span>
+            <span class="tag-sm">Within 0.3% of source</span>
           </div>
-          <div class="skill-group">
-            <span class="skill-group-label">ML &amp; Modeling</span>
-            <div class="skill-tags">
-              <span class="tag">scikit-learn</span>
-              <span class="tag">Predictive Modeling</span>
-              <span class="tag">Classification</span>
-              <span class="tag">Dimensional Modeling</span>
-              <span class="tag">Star Schema</span>
-            </div>
+        </div>
+        <div class="pipeline-stage reveal">
+          <span class="stage-num">05</span>
+          <h4 class="stage-title">Serve</h4>
+          <p class="stage-desc">Semantic models with row-level security, LookML explores, and AI built into the pipeline.</p>
+          <div class="stage-proof">
+            <span class="tag-sm">5 executive Looker dashboards</span>
+            <span class="tag-sm">Power BI + RLS</span>
+            <span class="tag-sm">GPT-4 · RAG · LangGraph</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SKILLS ═══════════════ -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Skills</span>
+        <h2 class="section-title">Data Engineering Toolkit</h2>
+        <p class="section-subtitle">The platforms, patterns, and tools I use to move data from source to insight.</p>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-card reveal">
+          <span class="skill-group-label">Cloud Data Platforms</span>
+          <div class="skill-tags">
+            <span class="tag tag-accent">Microsoft Fabric</span>
+            <span class="tag">Google Cloud (GCP)</span>
+            <span class="tag tag-accent">BigQuery</span>
+            <span class="tag">Azure</span>
+            <span class="tag">Azure Data Factory</span>
+            <span class="tag">Azure Data Lake Storage</span>
+            <span class="tag tag-accent">Databricks</span>
+            <span class="tag">Snowflake</span>
+            <span class="tag">AWS</span>
+          </div>
+        </div>
+        <div class="stack-card reveal">
+          <span class="skill-group-label">Lakehouse &amp; Warehousing</span>
+          <div class="skill-tags">
+            <span class="tag tag-accent">Lakehouse</span>
+            <span class="tag">Data Warehouse</span>
+            <span class="tag">OneLake</span>
+            <span class="tag">Delta Lake</span>
+            <span class="tag">Fabric Data Pipelines</span>
+            <span class="tag">Fabric Notebooks</span>
+            <span class="tag tag-accent">Medallion Architecture</span>
+            <span class="tag">Bronze / Silver / Gold</span>
+            <span class="tag">OLTP / OLAP</span>
+          </div>
+        </div>
+        <div class="stack-card reveal">
+          <span class="skill-group-label">Pipelines &amp; Orchestration</span>
+          <div class="skill-tags">
+            <span class="tag tag-accent">ETL / ELT</span>
+            <span class="tag">Batch &amp; Incremental Loads</span>
+            <span class="tag">Scheduled Pipelines</span>
+            <span class="tag">Pipeline Orchestration</span>
+            <span class="tag">Apache Airflow</span>
+            <span class="tag">dbt</span>
+            <span class="tag">Change Data Capture (CDC)</span>
+            <span class="tag">REST API Ingestion</span>
+            <span class="tag">JSON / CSV / Parquet</span>
+            <span class="tag">Exception Handling</span>
+            <span class="tag tag-accent">Data Migration</span>
+          </div>
+        </div>
+        <div class="stack-card reveal">
+          <span class="skill-group-label">Big Data Processing</span>
+          <div class="skill-tags">
+            <span class="tag tag-accent">Apache Spark</span>
+            <span class="tag tag-accent">PySpark</span>
+            <span class="tag">Spark SQL</span>
+            <span class="tag">Hadoop</span>
+            <span class="tag">Apache Hive</span>
+            <span class="tag">HiveQL</span>
+            <span class="tag">HDFS</span>
+            <span class="tag">Sqoop</span>
+          </div>
+        </div>
+        <div class="stack-card reveal">
+          <span class="skill-group-label">SQL &amp; Databases</span>
+          <div class="skill-tags">
+            <span class="tag tag-accent">Advanced SQL</span>
+            <span class="tag">CTEs</span>
+            <span class="tag">Window Functions</span>
+            <span class="tag">Stored Procedures</span>
+            <span class="tag">Query Tuning &amp; Indexing</span>
+            <span class="tag">BigQuery SQL</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">SQL Server</span>
+            <span class="tag">Oracle</span>
+            <span class="tag">Teradata</span>
+            <span class="tag">SAP HANA</span>
+          </div>
+        </div>
+        <div class="stack-card reveal">
+          <span class="skill-group-label">Data Modeling</span>
+          <div class="skill-tags">
+            <span class="tag tag-accent">Dimensional Modeling (Kimball)</span>
+            <span class="tag">Star Schema</span>
+            <span class="tag">Snowflake Schema</span>
+            <span class="tag">Fact &amp; Dimension Tables</span>
+            <span class="tag">Data Grain</span>
+            <span class="tag">Composite &amp; Surrogate Keys</span>
+            <span class="tag">Slowly Changing Dimensions (SCD)</span>
+            <span class="tag">Denormalized Views</span>
+            <span class="tag">Relational Modeling</span>
+            <span class="tag">Semantic Models</span>
+          </div>
+        </div>
+        <div class="stack-card reveal">
+          <span class="skill-group-label">Data Quality &amp; Governance</span>
+          <div class="skill-tags">
+            <span class="tag">Data Validation</span>
+            <span class="tag tag-accent">Reconciliation</span>
+            <span class="tag">Data Profiling</span>
+            <span class="tag">Data Quality Audits</span>
+            <span class="tag">Row-Level Security</span>
+            <span class="tag">Role-Based Access Control</span>
+            <span class="tag">Data Governance</span>
+            <span class="tag">Data Lineage</span>
+            <span class="tag">Technical Documentation</span>
+          </div>
+        </div>
+        <div class="stack-card reveal">
+          <span class="skill-group-label">Programming</span>
+          <div class="skill-tags">
+            <span class="tag tag-accent">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">SQLAlchemy</span>
+            <span class="tag tag-accent">SQL</span>
+            <span class="tag">PySpark</span>
+            <span class="tag">R</span>
+            <span class="tag">DAX</span>
+            <span class="tag">LookML</span>
+            <span class="tag">VBA</span>
+            <span class="tag">Flask</span>
+            <span class="tag">React</span>
+          </div>
+        </div>
+        <div class="stack-card reveal">
+          <span class="skill-group-label">BI &amp; Semantic Layer</span>
+          <div class="skill-tags">
+            <span class="tag tag-accent">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Power Query</span>
+            <span class="tag">Tabular Editor</span>
+            <span class="tag tag-accent">Looker</span>
+            <span class="tag">LookML</span>
+            <span class="tag">Tableau</span>
+            <span class="tag">Qlik</span>
+            <span class="tag">Spotfire</span>
+            <span class="tag">Metabase</span>
+            <span class="tag">Excel (Pivot Tables)</span>
+          </div>
+        </div>
+        <div class="stack-card reveal">
+          <span class="skill-group-label">AI &amp; Machine Learning</span>
+          <div class="skill-tags">
+            <span class="tag tag-accent">GPT-4</span>
+            <span class="tag">LLMs</span>
+            <span class="tag tag-accent">RAG</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">LangGraph</span>
+            <span class="tag">Prompt Engineering</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">Azure ML</span>
+            <span class="tag">Random Forest</span>
+            <span class="tag">Logistic Regression</span>
+            <span class="tag">k-NN</span>
+            <span class="tag">SVM</span>
+            <span class="tag">Forecasting</span>
+            <span class="tag">A/B Testing</span>
+          </div>
+        </div>
+        <div class="stack-card reveal">
+          <span class="skill-group-label">DevOps &amp; Delivery</span>
+          <div class="skill-tags">
+            <span class="tag tag-accent">Git / GitHub</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">Jira</span>
+            <span class="tag">ServiceNow</span>
+            <span class="tag">Agile / Scrum</span>
+            <span class="tag">Power Automate</span>
+            <span class="tag">Power Apps</span>
+            <span class="tag">Microsoft Visio</span>
           </div>
         </div>
       </div>
@@ -206,31 +495,35 @@
   </section>
 
   <!-- ═══════════════ EXPERIENCE ═══════════════ -->
-  <section id="experience" class="section section-alt">
+  <section id="experience" class="section">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Career</span>
         <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">Six roles, one through-line: building data people can trust.</p>
       </div>
       <div class="timeline">
 
-        <div class="timeline-item reveal">
+        <div class="timeline-item reveal timeline-item-current">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-header">
               <div>
-                <h3 class="timeline-role">Analytics Engineer</h3>
-                <p class="timeline-company">Wisdom Index Advisors</p>
+                <h3 class="timeline-role">Data Engineer <span class="current-pill">Current</span></h3>
+                <p class="timeline-company">Verizon <span class="timeline-loc">· Irving, TX</span></p>
               </div>
-              <span class="timeline-date">Aug 2025 — Dec 2025</span>
+              <span class="timeline-date">Jul 2026 — Present</span>
             </div>
+            <p class="timeline-focus">Enterprise-scale GCP data engineering for the Revenue Operations team: 20 pipelines, a validated migration, reconciliation, and executive reporting.</p>
             <ul class="timeline-bullets">
-              <li>Designed and delivered enterprise Power BI solutions consolidating <strong>37+ financial KPIs</strong>, reducing stakeholder review time by <strong>80%</strong>.</li>
-              <li>Led discovery sessions with sales and finance stakeholders, translating business requirements into semantic models with Row Level Security and role-based access controls.</li>
-              <li>Leveraged DAX, Power Query, and PostgreSQL stored procedures to build optimized dataflows and automate recurring client reporting pipelines, cutting data lookup time by <strong>70%</strong>.</li>
+              <li>Built and scheduled <strong>20 GCP data pipelines</strong> in BigQuery SQL and Python for the Revenue Operations team, ingesting source-system data into analytics-ready BigQuery tables that feed downstream Python ML modules and reporting.</li>
+              <li>Automate <strong>Revenue Assurance reconciliation</strong> pipelines that match source and downstream records and surface revenue variances, so analysts review only the exceptions.</li>
+              <li>Validated <strong>125 migrated Teradata → BigQuery ETL processes</strong> with a Python test harness that executes each script and reconciles row counts, catching a BETWEEN date-range defect before production cutover.</li>
+              <li>Delivered <strong>5 executive Looker dashboards</strong> for Revenue Operations on a LookML semantic layer over Oracle (explores, filtered measures, governed metric definitions), giving leadership self-service reporting and retiring a manual email-based report.</li>
+              <li>Use <strong>AI and LLM tooling</strong> (GPT-4, prompt engineering) to speed up SQL and Python development, pipeline documentation, and data-quality investigations.</li>
             </ul>
             <div class="timeline-tags">
-              <span class="tag-sm">Power BI</span><span class="tag-sm">DAX</span><span class="tag-sm">PostgreSQL</span><span class="tag-sm">Python</span><span class="tag-sm">SQL</span>
+              <span class="tag-sm">GCP</span><span class="tag-sm">BigQuery</span><span class="tag-sm">Python</span><span class="tag-sm">SQL</span><span class="tag-sm">Teradata</span><span class="tag-sm">Oracle</span><span class="tag-sm">Looker</span><span class="tag-sm">LookML</span><span class="tag-sm">GenAI</span>
             </div>
           </div>
         </div>
@@ -240,18 +533,20 @@
           <div class="timeline-card">
             <div class="timeline-header">
               <div>
-                <h3 class="timeline-role">Research Data Analyst</h3>
-                <p class="timeline-company">University of North Texas</p>
+                <h3 class="timeline-role">Data Engineer</h3>
+                <p class="timeline-company">Holiday Channel <span class="timeline-loc">· Remote</span></p>
               </div>
-              <span class="timeline-date">Feb 2024 — Aug 2025</span>
+              <span class="timeline-date">Feb 2026 — May 2026</span>
             </div>
+            <p class="timeline-focus">Built a medallion lakehouse from the ground up and put GPT-4 inside the pipeline.</p>
             <ul class="timeline-bullets">
-              <li>Designed and maintained enterprise Power BI dashboards using star schema models and DAX, tracking operational KPIs across <strong>4,128+ facilities</strong> and <strong>3M+ records</strong> in a healthcare environment.</li>
-              <li>Automated data ingestion via Python and Power Automate, reducing manual processing effort by <strong>40%</strong> while ensuring data accuracy for leadership reporting.</li>
-              <li>Implemented governance, security, and access controls ensuring deliverables met compliance requirements for sensitive healthcare data across cross-functional teams.</li>
+              <li>Architected PySpark and SQL <strong>medallion pipelines (Bronze → Silver → Gold)</strong> that ingest, cleanse, and standardize multi-source content and engagement data, replacing manual analyst prep with <strong>daily automated refreshes</strong>.</li>
+              <li>Automated a weekly Google Sheets → PostgreSQL sync in Python with a dry-run mode for safe deploys, cutting a <strong>2–4 hour manual job to 2 minutes</strong> (98%+ faster).</li>
+              <li>Delivered Power BI semantic models with DAX measures and <strong>row-level security</strong> for content and revenue reporting.</li>
+              <li>Integrated the <strong>GPT-4 API</strong> into the content pipeline to auto-generate metadata tags and summaries for every record.</li>
             </ul>
             <div class="timeline-tags">
-              <span class="tag-sm">Power BI</span><span class="tag-sm">Python</span><span class="tag-sm">DAX</span><span class="tag-sm">Power Automate</span><span class="tag-sm">SQL</span>
+              <span class="tag-sm">PySpark</span><span class="tag-sm">SQL</span><span class="tag-sm">Medallion Architecture</span><span class="tag-sm">PostgreSQL</span><span class="tag-sm">Python</span><span class="tag-sm">Power BI</span><span class="tag-sm">GPT-4 API</span>
             </div>
           </div>
         </div>
@@ -262,17 +557,93 @@
             <div class="timeline-header">
               <div>
                 <h3 class="timeline-role">Data Analyst</h3>
-                <p class="timeline-company">Accenture</p>
+                <p class="timeline-company">Cates Control Systems <span class="timeline-loc">· Plano, TX</span></p>
+              </div>
+              <span class="timeline-date">May 2026 — Jul 2026</span>
+            </div>
+            <p class="timeline-focus">Dimensional modeling on ERP data, getting the grain and keys right so the business could trust the numbers.</p>
+            <ul class="timeline-bullets">
+              <li>Modeled Epicor ERP purchase-order header, release, and vendor tables into a <strong>12-table Power BI semantic model</strong> with 8 DAX measures.</li>
+              <li>Set fact grain at PO release and engineered <strong>composite keys across two Epicor company codes</strong>, so PO aging, open quantity, and past-due measures aggregate correctly across both plant sites.</li>
+              <li>Profiled a 50.97 MB Epicor dataset and evaluated deployment and licensing trade-offs, recommending a <strong>~$210/month</strong> Power BI Pro plan to scale access to 10–15 users.</li>
+              <li>Rebuilt an Excel aged-inventory model in Power BI, validating stock segments to within <strong>0.3%</strong> of the analyst source.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag-sm">Dimensional Modeling</span><span class="tag-sm">Power BI</span><span class="tag-sm">DAX</span><span class="tag-sm">Epicor ERP</span><span class="tag-sm">Data Profiling</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Data Analyst</h3>
+                <p class="timeline-company">Wisdom Index Advisors <span class="timeline-loc">· Remote</span></p>
+              </div>
+              <span class="timeline-date">Aug 2025 — Dec 2025</span>
+            </div>
+            <p class="timeline-focus">Took an advisory firm from spreadsheets to a cloud database, a full-stack analytics app, and an AI review agent.</p>
+            <ul class="timeline-bullets">
+              <li>Co-led design and deployment of a <strong>PostgreSQL cloud database</strong> covering <strong>37+ financial metrics</strong>, migrating the firm from manual Excel workflows to a centralized data architecture.</li>
+              <li>Developed SQL stored procedures and Python refresh scripts that automate client lifetime value and KPI calculations, cutting client lookup time <strong>70%</strong>.</li>
+              <li>Built a full-stack <strong>React, Flask, and PostgreSQL</strong> analytics app consolidating 37+ KPIs into a single source of truth, cutting CEO review time <strong>80%</strong>.</li>
+              <li>Embedded a <strong>GPT-4 review agent</strong> that summarizes each client's financial position, flags anomalies, and recommends corrective steps toward metric goals.</li>
+              <li>Built churn-risk analytics that surfaced <strong>$2.1M in at-risk client revenue</strong> for leadership.</li>
+              <li>Led discovery sessions with sales and finance stakeholders, translating requirements into Power BI semantic models with DAX and row-level security.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag-sm">PostgreSQL</span><span class="tag-sm">SQL</span><span class="tag-sm">Python</span><span class="tag-sm">Flask</span><span class="tag-sm">React</span><span class="tag-sm">GPT-4</span><span class="tag-sm">Power BI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Data Analyst</h3>
+                <p class="timeline-company">University of North Texas <span class="timeline-loc">· Denton, TX</span></p>
+              </div>
+              <span class="timeline-date">Feb 2024 — Aug 2025</span>
+            </div>
+            <p class="timeline-focus">Healthcare data at scale: automated ingestion, governed star-schema models, and statistics on millions of records.</p>
+            <ul class="timeline-bullets">
+              <li>Engineered automated ingestion and cleansing workflows in Python, SQL, Power Query, and Power Automate with built-in data quality checks, reducing manual processing effort <strong>40%</strong>.</li>
+              <li>Designed <strong>star-schema</strong> Power BI semantic models (fact and dimension tables, DAX) over <strong>3M+ healthcare records</strong>, tracking transplant operations, regional trends, and capacity across <strong>4,128+ facilities</strong>.</li>
+              <li>Ran geospatial analysis in Jupyter across all <strong>50 U.S. states</strong>, documenting data workflows, quality issues, and the workarounds that kept the analysis reliable.</li>
+              <li>Analyzed <strong>543,000 kidney transplant records</strong> with logistic regression and outlier detection in scikit-learn and Azure ML to identify transplant success factors.</li>
+              <li>Implemented governance and access controls for sensitive healthcare data, and partnered with administrators, IT, and faculty to define KPIs and unify metric definitions.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag-sm">Python</span><span class="tag-sm">SQL</span><span class="tag-sm">Power Automate</span><span class="tag-sm">Star Schema</span><span class="tag-sm">Power BI</span><span class="tag-sm">Azure ML</span><span class="tag-sm">Data Governance</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Data Analyst</h3>
+                <p class="timeline-company">Accenture <span class="timeline-loc">· Hyderabad, India</span></p>
               </div>
               <span class="timeline-date">Nov 2021 — Dec 2023</span>
             </div>
+            <p class="timeline-focus">Enterprise foundations: ETL/ELT, SQL performance across 30+ systems, and data quality at volume.</p>
             <ul class="timeline-bullets">
-              <li>Developed enterprise Power BI financial reporting dashboards and semantic models across <strong>5+ business categories</strong>, reducing manual reporting time by <strong>33%</strong> through automation.</li>
-              <li>Optimized complex SQL queries integrating data from <strong>30+ relational sources</strong> (SAP, CRM, HANA), improving query retrieval performance by <strong>20%</strong> through indexing and tuning.</li>
-              <li>Built a Random Forest classification model in Python for customer churn prediction achieving <strong>83% accuracy</strong>, delivering actionable retention recommendations to leadership.</li>
+              <li>Built and maintained <strong>ETL/ELT pipelines</strong> across OLTP and OLAP databases, writing Python processing scripts with exception handling plus ETL validation scenarios with data profiling in enterprise data lakes.</li>
+              <li>Optimized SQL (CTEs, window functions, indexing, query tuning) integrating <strong>30+ legacy sources</strong>, including SAP HANA and CRM, into centralized models, improving retrieval performance <strong>20%</strong>.</li>
+              <li>Designed <strong>Snowflake star-schema</strong> models for financial reporting with role-based access controls, improving query performance <strong>25%</strong>.</li>
+              <li>Resolved <strong>50+ escalated data issues daily</strong> through routine data audits and coverage and accuracy monitoring.</li>
+              <li>Delivered financial dashboards and semantic models across <strong>5+ business categories</strong>, cutting manual reporting <strong>33%</strong>.</li>
+              <li>Built a Random Forest churn-prediction model in Python with <strong>83% accuracy</strong>, and partnered with data engineering and architecture teams to migrate and standardize data into governed BI.</li>
             </ul>
             <div class="timeline-tags">
-              <span class="tag-sm">Power BI</span><span class="tag-sm">SQL</span><span class="tag-sm">SAP HANA</span><span class="tag-sm">Python</span><span class="tag-sm">DAX</span>
+              <span class="tag-sm">ETL/ELT</span><span class="tag-sm">SQL</span><span class="tag-sm">Python</span><span class="tag-sm">Snowflake</span><span class="tag-sm">SAP HANA</span><span class="tag-sm">Data Lakes</span><span class="tag-sm">Data Quality</span>
             </div>
           </div>
         </div>
@@ -282,20 +653,20 @@
   </section>
 
   <!-- ═══════════════ PROJECTS ═══════════════ -->
-  <section id="projects" class="section">
+  <section id="projects" class="section section-alt">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Portfolio</span>
         <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">End-to-end analytics, engineering, and BI projects across multiple domains.</p>
+        <p class="section-subtitle">Lakehouse pipelines, warehouse models, and BI built end to end.</p>
       </div>
 
       <div class="filter-tabs reveal">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="analyst">Data Analyst</button>
-        <button class="filter-btn" data-filter="engineering">Data Engineering</button>
-        <button class="filter-btn" data-filter="bi">BI & Visualization</button>
-        <button class="filter-btn" data-filter="ml">ML & Modeling</button>
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" data-filter="engineering" aria-pressed="false">Data Engineering</button>
+        <button class="filter-btn" data-filter="bi" aria-pressed="false">BI &amp; Visualization</button>
+        <button class="filter-btn" data-filter="analyst" aria-pressed="false">Data Analysis</button>
+        <button class="filter-btn" data-filter="ml" aria-pressed="false">ML &amp; Modeling</button>
       </div>
 
       <div class="projects-grid" id="projectsGrid">
@@ -308,18 +679,18 @@
             </div>
             <span class="project-cat-badge badge-engineering">Data Engineering</span>
           </div>
-          <h3 class="project-title">Real-Time Earthquake Data Pipeline</h3>
-          <p class="project-desc">Production-grade end-to-end data pipeline ingesting live USGS seismic API feeds through Medallion Architecture (Bronze → Silver → Gold) on Microsoft Fabric, producing analytics-ready dimensional models.</p>
+          <h3 class="project-title">Real-Time Earthquake ELT Pipeline</h3>
+          <p class="project-desc">Lands USGS API JSON in a Microsoft Fabric OneLake Lakehouse through Bronze, Silver, and Gold PySpark notebooks. The Silver layer standardizes schema, deduplicates, removes nulls, and type-casts magnitude, depth, and timestamps; Gold dimensional tables power geospatial hotspot and magnitude-trend dashboards in Power BI.</p>
           <div class="project-metric">
             <span class="metric-label">Architecture</span>
-            <span class="metric-value">3-Layer Medallion · OneLake · PySpark</span>
+            <span class="metric-value">Bronze → Silver → Gold · OneLake Lakehouse · DQ checks per layer</span>
           </div>
           <div class="project-tags">
             <span class="tag-sm">Microsoft Fabric</span>
-            <span class="tag-sm">PySpark</span>
-            <span class="tag-sm">Python</span>
+            <span class="tag-sm">Lakehouse</span>
             <span class="tag-sm">OneLake</span>
-            <span class="tag-sm">Medallion Architecture</span>
+            <span class="tag-sm">PySpark</span>
+            <span class="tag-sm">Power BI</span>
           </div>
           <div class="project-links">
             <a href="https://github.com/PRAKASH3S" target="_blank" rel="noopener" class="project-link">
@@ -335,20 +706,20 @@
             <div class="project-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
             </div>
-            <span class="project-cat-badge badge-bi">Analytics Engineering</span>
+            <span class="project-cat-badge badge-engineering">Data Engineering</span>
           </div>
-          <h3 class="project-title">E-Commerce ETL Pipeline &amp; BI Dashboard</h3>
-          <p class="project-desc">End-to-end ETL pipeline on Databricks using 6 modular notebooks across Bronze–Gold layers, transforming 10K+ transactions into dimensional models powering interactive Power BI dashboards.</p>
+          <h3 class="project-title">E-Commerce ETL Pipeline &amp; BI Model</h3>
+          <p class="project-desc">Six modular Databricks medallion notebooks — 3 dimension, 3 fact — producing Gold fact and dimension tables. Silver business rules handle discounts, sale amounts, and currency conversion via a rate-dimension join; Gold aggregations and denormalized views feed Power BI, Tableau, and a Databricks KPI dashboard.</p>
           <div class="project-metric">
-            <span class="metric-label">Scale</span>
-            <span class="metric-value">10K+ Transactions · 6 Data Layers · Gold-tier BI</span>
+            <span class="metric-label">Model</span>
+            <span class="metric-value">6 notebooks · 3 dimensions + 3 facts · Clean fact-to-dimension joins</span>
           </div>
           <div class="project-tags">
             <span class="tag-sm">Databricks</span>
             <span class="tag-sm">Apache Spark</span>
             <span class="tag-sm">SQL</span>
+            <span class="tag-sm">Dimensional Modeling</span>
             <span class="tag-sm">Power BI</span>
-            <span class="tag-sm">Medallion Architecture</span>
           </div>
           <div class="project-links">
             <a href="https://github.com/PRAKASH3S" target="_blank" rel="noopener" class="project-link">
@@ -358,25 +729,110 @@
           </div>
         </div>
 
-        <!-- PROJECT 3: Adidas Sales -->
+        <!-- PROJECT 3: IMDb Hive Warehouse -->
+        <div class="project-card reveal" data-category="engineering">
+          <div class="project-card-top">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+            </div>
+            <span class="project-cat-badge badge-engineering">Big Data</span>
+          </div>
+          <h3 class="project-title">IMDb Big Data Warehouse Analytics</h3>
+          <p class="project-desc">External Hive tables over HDFS with defined schemas, managing schema evolution under Hive's immutable metadata. RDBMS data ingested via Sqoop, with HiveQL window functions, RANK(), and CTEs producing genre and director rankings.</p>
+          <div class="project-metric">
+            <span class="metric-label">Stack</span>
+            <span class="metric-value">HDFS · Hive external tables · Sqoop ingestion</span>
+          </div>
+          <div class="project-tags">
+            <span class="tag-sm">Apache Hive</span>
+            <span class="tag-sm">HiveQL</span>
+            <span class="tag-sm">HDFS</span>
+            <span class="tag-sm">Sqoop</span>
+            <span class="tag-sm">Window Functions</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/PRAKASH3S" target="_blank" rel="noopener" class="project-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              View Code
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 4: Spotify Dashboard -->
+        <div class="project-card reveal" data-category="bi">
+          <div class="project-card-top">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+            </div>
+            <span class="project-cat-badge badge-bi">BI &amp; Semantic Model</span>
+          </div>
+          <h3 class="project-title">Spotify Listening Patterns Dashboard</h3>
+          <p class="project-desc">Power BI semantic model over 149,860 listening events (2013–2024) across 13,839 tracks, 4,113 artists, and 7,948 albums, with DAX time-series and YoY measures, platform / shuffle / skip slicers, and weekday-versus-weekend views.</p>
+          <div class="project-metric">
+            <span class="metric-label">Scale</span>
+            <span class="metric-value">149,860 events · 13,839 tracks · 4,113 artists</span>
+          </div>
+          <div class="project-tags">
+            <span class="tag-sm">Power BI</span>
+            <span class="tag-sm">DAX</span>
+            <span class="tag-sm">Power Query</span>
+            <span class="tag-sm">Semantic Modeling</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/PRAKASH3S" target="_blank" rel="noopener" class="project-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              View Code
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 5: JD E-Commerce Analytics -->
+        <div class="project-card reveal" data-category="analyst">
+          <div class="project-card-top">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </div>
+            <span class="project-cat-badge badge-analyst">Data Profiling</span>
+          </div>
+          <h3 class="project-title">JD E-Commerce Platform Analytics</h3>
+          <p class="project-desc">Profiled 549,989 orders, 457,298 users, and 31,868 SKUs with reusable Pandas functions for schema and grain checks. Flagged 90.4% and 96.4% missing rates in SKU date fields and documented imputation-versus-exclusion guidance.</p>
+          <div class="project-metric">
+            <span class="metric-label">Data Quality</span>
+            <span class="metric-value">549K Orders · 457K Users · 90.4% / 96.4% Missing Rates Flagged</span>
+          </div>
+          <div class="project-tags">
+            <span class="tag-sm">Python</span>
+            <span class="tag-sm">Pandas</span>
+            <span class="tag-sm">NumPy</span>
+            <span class="tag-sm">Data Profiling</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/PRAKASH3S" target="_blank" rel="noopener" class="project-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              View Code
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 6: Adidas Sales -->
         <div class="project-card reveal" data-category="analyst bi">
           <div class="project-card-top">
             <div class="project-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
             </div>
-            <span class="project-cat-badge badge-analyst">Data Analyst</span>
+            <span class="project-cat-badge badge-analyst">Data Analysis</span>
           </div>
           <h3 class="project-title">Adidas Sales Performance Analysis</h3>
-          <p class="project-desc">Tableau-driven analysis of 9,000+ sales transactions uncovering regional performance trends, channel shifts, and YoY growth patterns. Identified divergence between online and retail channels driving strategic pivots.</p>
+          <p class="project-desc">End-to-end sales analytics in Tableau across 9,000+ Adidas transactions, using calculated fields and parameters to track regional performance, product-category profitability, and sales-channel effectiveness.</p>
           <div class="project-metric">
             <span class="metric-label">Key Finding</span>
             <span class="metric-value">45% YoY Online Growth · 12% Retail Decline</span>
           </div>
           <div class="project-tags">
             <span class="tag-sm">Tableau</span>
-            <span class="tag-sm">PostgreSQL</span>
             <span class="tag-sm">SQL</span>
-            <span class="tag-sm">Advanced Excel</span>
+            <span class="tag-sm">Calculated Fields</span>
+            <span class="tag-sm">Parameters</span>
           </div>
           <div class="project-links">
             <a href="https://github.com/PRAKASH3S" target="_blank" rel="noopener" class="project-link">
@@ -386,7 +842,7 @@
           </div>
         </div>
 
-        <!-- PROJECT 4: Bank Loan Prediction -->
+        <!-- PROJECT 7: Bank Loan Prediction -->
         <div class="project-card reveal" data-category="ml analyst">
           <div class="project-card-top">
             <div class="project-icon">
@@ -415,13 +871,13 @@
           </div>
         </div>
 
-        <!-- PROJECT 5: Supply Chain -->
+        <!-- PROJECT 8: Supply Chain -->
         <div class="project-card reveal" data-category="analyst">
           <div class="project-card-top">
             <div class="project-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </div>
-            <span class="project-cat-badge badge-analyst">Data Analyst</span>
+            <span class="project-cat-badge badge-analyst">Data Analysis</span>
           </div>
           <h3 class="project-title">Supply Chain Cost Optimization &amp; ABC Analysis</h3>
           <p class="project-desc">Activity-based cost analysis across three distribution channels (Traditional Retail, BOPUS, BODDC) with ABC inventory segmentation and EOQ modeling to identify cost reduction strategies and optimize inventory allocation.</p>
@@ -444,41 +900,12 @@
           </div>
         </div>
 
-        <!-- PROJECT 6: JD E-Commerce Analytics -->
-        <div class="project-card reveal" data-category="analyst">
-          <div class="project-card-top">
-            <div class="project-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
-            </div>
-            <span class="project-cat-badge badge-analyst">Data Analyst</span>
-          </div>
-          <h3 class="project-title">JD E-Commerce Customer &amp; Order Analytics</h3>
-          <p class="project-desc">Deep exploratory analysis on China's largest B2B e-commerce platform — profiling 549,989 orders, 457,298 users, and 31,868 SKUs. Uncovered pricing structures, discount impacts, demand patterns, and customer segmentation insights.</p>
-          <div class="project-metric">
-            <span class="metric-label">Scale</span>
-            <span class="metric-value">549K Orders · 457K Users · 90.4% Missing Data Identified</span>
-          </div>
-          <div class="project-tags">
-            <span class="tag-sm">Python</span>
-            <span class="tag-sm">Pandas</span>
-            <span class="tag-sm">NumPy</span>
-            <span class="tag-sm">EDA</span>
-            <span class="tag-sm">Time-Series Analysis</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/PRAKASH3S" target="_blank" rel="noopener" class="project-link">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-              View Code
-            </a>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
   <!-- ═══════════════ EDUCATION & CERTIFICATIONS ═══════════════ -->
-  <section id="education" class="section section-alt">
+  <section id="education" class="section">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Credentials</span>
@@ -500,7 +927,7 @@
               <p class="edu-school">University of North Texas</p>
               <p class="edu-detail">G. Brint Ryan College of Business · Denton, TX</p>
               <div class="edu-meta">
-                <span class="edu-badge">GPA: 3.91 / 4.0</span>
+                <span class="edu-badge">GPA: 3.9 / 4.0</span>
                 <span class="edu-date">Jan 2024 — Dec 2025</span>
               </div>
             </div>
@@ -532,9 +959,9 @@
               <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><path fill="#f3f3f3" d="M0 0h23v23H0z"/><path fill="#f35325" d="M1 1h10v10H1z"/><path fill="#81bc06" d="M12 1h10v10H12z"/><path fill="#05a6f0" d="M1 12h10v10H1z"/><path fill="#ffba08" d="M12 12h10v10H12z"/></svg>
             </div>
             <div class="cert-info">
-              <h4 class="cert-name">Power BI Data Analyst Associate</h4>
-              <p class="cert-issuer">Microsoft · PL-300</p>
-              <p class="cert-desc">Enterprise Power BI, DAX, Semantic Modeling, Row Level Security, Report Design</p>
+              <h4 class="cert-name">Fabric Analytics Engineer Associate</h4>
+              <p class="cert-issuer">Microsoft · DP-600</p>
+              <p class="cert-desc">Fabric Lakehouse &amp; Warehouse, OneLake, data pipelines, notebooks, semantic models</p>
             </div>
             <span class="cert-status">Active</span>
           </div>
@@ -544,11 +971,23 @@
               <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><path fill="#f3f3f3" d="M0 0h23v23H0z"/><path fill="#f35325" d="M1 1h10v10H1z"/><path fill="#81bc06" d="M12 1h10v10H12z"/><path fill="#05a6f0" d="M1 12h10v10H1z"/><path fill="#ffba08" d="M12 12h10v10H12z"/></svg>
             </div>
             <div class="cert-info">
-              <h4 class="cert-name">Fabric Analytics Engineer Associate</h4>
-              <p class="cert-issuer">Microsoft · DP-600</p>
-              <p class="cert-desc">Microsoft Fabric, Lakehouse, OneLake, Data Pipelines, Notebooks, Semantic Models</p>
+              <h4 class="cert-name">Power BI Data Analyst Associate</h4>
+              <p class="cert-issuer">Microsoft · PL-300</p>
+              <p class="cert-desc">Data preparation, DAX, semantic modeling, row-level security, report design</p>
             </div>
             <span class="cert-status">Active</span>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-logo cert-logo-course">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6.253v13C10.832 18.477 9.246 18 7.5 18S4.168 18.477 3 19.253v-13C4.168 5.477 5.754 5 7.5 5s3.332.477 4.5 1.253zm0 0C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
+            <div class="cert-info">
+              <h4 class="cert-name">Data Engineering Coursework</h4>
+              <p class="cert-issuer">DataCamp</p>
+              <p class="cert-desc">Data Warehousing Concepts · Database Design · Introduction to Relational Databases in SQL · Understanding Cloud Computing</p>
+            </div>
+            <span class="cert-status">Completed</span>
           </div>
         </div>
       </div>
@@ -556,7 +995,7 @@
   </section>
 
   <!-- ═══════════════ AWARDS & LEADERSHIP ═══════════════ -->
-  <section id="awards" class="section">
+  <section id="awards" class="section section-alt">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Recognition</span>
@@ -598,18 +1037,18 @@
   </section>
 
   <!-- ═══════════════ CONTACT ═══════════════ -->
-  <section id="contact" class="section section-alt">
+  <section id="contact" class="section">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Contact</span>
         <h2 class="section-title">Let's Work Together</h2>
-        <p class="section-subtitle">Open to Data Analyst, Analytics Engineer, BI Engineer, and Data Engineer roles.<br>Available immediately.</p>
+        <p class="section-subtitle">Always open to a conversation about what's next: data engineering, lakehouse,<br>and analytics engineering work where reliable data really matters.</p>
       </div>
       <div class="contact-grid">
         <div class="contact-info reveal">
           <p class="contact-blurb">
-            Whether you're looking for someone to build your next analytics platform, design impactful dashboards,
-            or dig deep into your data — I'd love to connect.
+            Whether you need a lakehouse built, a migration validated before cutover, or a semantic model your analysts
+            can actually trust — I'd love to connect.
           </p>
           <div class="contact-links">
             <a href="mailto:tekiprakash1@gmail.com" class="contact-item">
@@ -619,6 +1058,15 @@
               <div>
                 <span class="contact-label">Email</span>
                 <span class="contact-value">tekiprakash1@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+14697390718" class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.5 4.49a1 1 0 01-.5 1.21l-2.26 1.13a11.04 11.04 0 005.52 5.52l1.13-2.26a1 1 0 011.21-.5l4.49 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z"/></svg>
+              </div>
+              <div>
+                <span class="contact-label">Phone</span>
+                <span class="contact-value">(469) 739-0718</span>
               </div>
             </a>
             <a href="https://www.linkedin.com/in/tekip" target="_blank" rel="noopener" class="contact-item">
@@ -645,15 +1093,14 @@
               </div>
               <div>
                 <span class="contact-label">Location</span>
-                <span class="contact-value">Denton, TX (Open to Remote)</span>
+                <span class="contact-value">Denton, TX · Dallas–Fort Worth</span>
               </div>
             </div>
           </div>
         </div>
 
-        <form class="contact-form reveal" id="contactForm" name="contact" method="POST" data-netlify="true" action="/thank-you">
-          <!-- Netlify hidden field -->
-          <input type="hidden" name="form-name" value="contact" />
+        <!-- GitHub Pages has no form backend: script.js opens the visitor's email app with the message pre-filled -->
+        <form class="contact-form reveal" id="contactForm" name="contact">
           <div class="form-group">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" placeholder="Jane Smith" required />
@@ -674,24 +1121,28 @@
             <span class="btn-text">Send Message</span>
             <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
           </button>
-          <p class="form-success" id="formSuccess">Message sent! I'll get back to you soon.</p>
+          <p class="form-success" id="formSuccess" role="status">Your email app should open with the message ready to send. If it doesn't, email me at tekiprakash1@gmail.com.</p>
         </form>
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer>
     <div class="container footer-inner">
       <div class="footer-brand">
         <span class="footer-logo">PT</span>
-        <p class="footer-tagline">Data Analyst &amp; Analytics Engineer<br>Denton, TX</p>
+        <p class="footer-tagline">Data Engineer · Microsoft Fabric · BigQuery<br>Denton, TX</p>
       </div>
       <nav class="footer-nav">
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
+        <a href="#awards">Awards</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="footer-socials">
@@ -704,9 +1155,13 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Prakash Teki. Built with purpose, deployed with pride.</p>
+      <p>© <span id="year">2026</span> Prakash Teki. Built with purpose, deployed with pride.</p>
     </div>
   </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
 
   <script src="script.js"></script>
 </body>
