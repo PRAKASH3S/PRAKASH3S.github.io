@@ -523,7 +523,8 @@ img { max-width: 100%; display: block; }
   gap: 4px;
   padding: 0 48px;
 }
-.stat-value { display: inline-flex; align-items: baseline; gap: 2px; }
+.stat-value { display: inline-flex; align-items: baseline; gap: 2px; line-height: 1; }
+.stat-value .stat-suffix { line-height: 1; }
 .stat-num {
   font-family: var(--font-h);
   font-size: clamp(1.8rem, 3vw, 2.4rem);
@@ -1244,6 +1245,7 @@ footer {
   .hero-visual { width: 300px; }
   .profile-frame { width: 270px; height: 340px; }
   .about-grid { gap: 40px; }
+  .stat-item { padding: 0 18px; }
 }
 
 @media (max-width: 860px) {
@@ -1271,7 +1273,7 @@ footer {
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .leadership-grid { grid-template-columns: 1fr; }
 
-  .stat-item { padding: 0 24px; }
+  .stat-item { padding: 0 14px; }
   .stat-num { font-size: 1.8rem; }
 }
 
@@ -1510,6 +1512,66 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     transform: translateX(-50%) rotate(135deg);
   }
 }
+
+/* ─── Career arc (About) ─── */
+.career-arc {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+.arc-list { list-style: none; position: relative; display: flex; flex-direction: column; gap: 18px; }
+.arc-list::before {
+  content: '';
+  position: absolute;
+  left: 30px; top: 8px; bottom: 8px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--border), var(--accent));
+}
+.arc-item { display: grid; grid-template-columns: 62px 1fr; gap: 14px; align-items: start; position: relative; }
+.arc-year {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-h);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-sec);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 3px 0;
+}
+.arc-co { display: block; font-family: var(--font-h); font-weight: 600; font-size: 0.95rem; color: var(--text); }
+.arc-lesson { display: block; font-size: 0.83rem; color: var(--text-sec); line-height: 1.5; }
+.arc-now .arc-year { color: var(--success); border-color: rgba(34, 197, 94, 0.4); background: rgba(34, 197, 94, 0.1); }
+
+/* ─── Skills toolkit (masonry columns) ─── */
+.stack-grid { columns: 3; column-gap: 20px; }
+.stack-card {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  transition: border-color 0.3s ease;
+}
+.stack-card:hover { border-color: var(--border-hover); }
+.stack-card .skill-group-label { color: var(--accent2); margin-bottom: 12px; }
+
+/* ─── Role summary line ─── */
+.timeline-focus {
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--text);
+  border-left: 2px solid var(--accent2);
+  padding-left: 12px;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 1024px) { .stack-grid { columns: 2; } }
+@media (max-width: 640px)  { .stack-grid { columns: 1; } .career-arc { padding: 22px; } }
 
 /* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
